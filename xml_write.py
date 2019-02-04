@@ -11,7 +11,7 @@ word_list = list()
 xml_desc = root.findall('channel/item/description')
 for xmli in xml_desc:
 	for j in xmli.text.split():
-		if len(j) >= 6:
+		if len(j) > 6:
 			word_list.append(j)
 
 result = {i: word_list.count(i) for i in word_list}

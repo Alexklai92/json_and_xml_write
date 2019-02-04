@@ -11,7 +11,7 @@ json_items = json_data['rss']['channel']['items']
 
 for i in json_items:
 	for j in i['description'].split():
-		if len(j) >= 6:
+		if len(j) > 6:
 			word_list.append(j)
 	
 result = {i: word_list.count(i) for i in word_list}
